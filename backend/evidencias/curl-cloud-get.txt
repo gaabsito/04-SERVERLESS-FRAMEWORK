@@ -1,0 +1,14 @@
+HTTP/2 200 
+content-type: application/json
+content-length: 281
+date: Wed, 28 Oct 2026 07:31:08 GMT
+x-amzn-trace-id: Root=1-6ae1a4bc-7869c6204ca5ce6d01d1832f;Parent=343aecb91cf374f6;Sampled=0;Lineage=1:983fa58c:0
+x-amzn-requestid: 04150b66-56cd-4380-a6c2-dcc82a273042
+access-control-allow-origin: *
+x-amz-apigw-id: F8atfHMLPHcEdPQ=
+x-cache: Miss from cloudfront
+via: 1.1 212413fd3e0ee564f03f9a2a5522e86a.cloudfront.net (CloudFront)
+x-amz-cf-pop: MAD53-P7
+x-amz-cf-id: t7VaWLlCAnPhcyfPzw4Xs5RKOwoumTSlRYd1uY3nYadUXy_ym9kDZA==
+
+[{"id":"ZONE-01","name":"Main Stage","capacity":5000,"status":"OPEN"},{"id":"ZONE-07","name":"Garden Stage","capacity":2500,"status":"FULL"},{"id":"ZONE-03","name":"Invernadero","capacity":1800,"status":"OPEN"},{"id":"ZONE-04","name":"Club Stage","capacity":900,"status":"CLOSED"}]

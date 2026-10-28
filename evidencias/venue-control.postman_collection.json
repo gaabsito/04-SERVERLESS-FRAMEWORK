@@ -1,0 +1,246 @@
+{
+  "info": {
+    "name": "Venue Control \u00b7 AWS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "07cce6d6-52c2-4acb-9d6b-18cd4fd6088d"
+  },
+  "item": [
+    {
+      "name": "GET /zones",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev/zones",
+          "protocol": "https",
+          "host": [
+            "vkmt2bkh68",
+            "execute-api",
+            "us-west-2",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "zones"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /zones/ZONE-07",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev/zones/ZONE-07",
+          "protocol": "https",
+          "host": [
+            "vkmt2bkh68",
+            "execute-api",
+            "us-west-2",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "zones",
+            "ZONE-07"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST /zones",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev/zones",
+          "protocol": "https",
+          "host": [
+            "vkmt2bkh68",
+            "execute-api",
+            "us-west-2",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "zones"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Garden Test\",\n  \"capacity\": 2500,\n  \"status\": \"OPEN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "PUT /zones/ZONE-07",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev/zones/ZONE-07",
+          "protocol": "https",
+          "host": [
+            "vkmt2bkh68",
+            "execute-api",
+            "us-west-2",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "zones",
+            "ZONE-07"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Garden Test\",\n  \"capacity\": 2500,\n  \"status\": \"OPEN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "PATCH /zones/ZONE-07",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev/zones/ZONE-07",
+          "protocol": "https",
+          "host": [
+            "vkmt2bkh68",
+            "execute-api",
+            "us-west-2",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "zones",
+            "ZONE-07"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"CLOSED\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "DELETE /zones/ZONE-07",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev/zones/ZONE-07",
+          "protocol": "https",
+          "host": [
+            "vkmt2bkh68",
+            "execute-api",
+            "us-west-2",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "zones",
+            "ZONE-07"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /zones/UNKNOWN",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev/zones/UNKNOWN",
+          "protocol": "https",
+          "host": [
+            "vkmt2bkh68",
+            "execute-api",
+            "us-west-2",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "zones",
+            "UNKNOWN"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST /zones",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev/zones",
+          "protocol": "https",
+          "host": [
+            "vkmt2bkh68",
+            "execute-api",
+            "us-west-2",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "dev",
+            "zones"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"capacity\": -1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

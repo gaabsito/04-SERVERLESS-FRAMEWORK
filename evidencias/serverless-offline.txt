@@ -1,0 +1,63 @@
+
+> venue-control-backend@1.0.0 start
+> npm run build && serverless offline
+
+
+> venue-control-backend@1.0.0 build
+> tsc
+
+
+Starting Offline at stage dev (us-west-2)
+
+Offline [http for lambda] listening on http://localhost:3003
+Function names exposed for local invocation by aws-sdk:
+   * zones: venue-control-gabriel-galan-dev-zones
+
+ ┌───────────────────────────────────────────────────────────────────────────┐
+ │                                                                           │
+ │   GET    | http://localhost:3001/dev/zones                                │
+ │   POST   | http://localhost:3001/2015-03-31/functions/zones/invocations   │
+ │   GET    | http://localhost:3001/dev/zones/{id}                           │
+ │   POST   | http://localhost:3001/2015-03-31/functions/zones/invocations   │
+ │   POST   | http://localhost:3001/dev/zones                                │
+ │   POST   | http://localhost:3001/2015-03-31/functions/zones/invocations   │
+ │   PUT    | http://localhost:3001/dev/zones/{id}                           │
+ │   POST   | http://localhost:3001/2015-03-31/functions/zones/invocations   │
+ │   PATCH  | http://localhost:3001/dev/zones/{id}                           │
+ │   POST   | http://localhost:3001/2015-03-31/functions/zones/invocations   │
+ │   DELETE | http://localhost:3001/dev/zones/{id}                           │
+ │   POST   | http://localhost:3001/2015-03-31/functions/zones/invocations   │
+ │                                                                           │
+ └───────────────────────────────────────────────────────────────────────────┘
+
+Server ready: http://localhost:3001 🚀
+
+
+GET /dev/zones (λ: zones)
+VENUE GET /zones collection
+(λ: zones) RequestId: c783b625-a1c2-4c1a-8785-9d4daa68f93e  Duration: 68.05 ms  Billed Duration: 69 ms
+
+
+POST /dev/zones (λ: zones)
+VENUE POST /zones collection
+(λ: zones) RequestId: d3af7589-29a0-491d-9dfc-fdb438625470  Duration: 2.05 ms  Billed Duration: 3 ms
+
+
+PUT /dev/zones/ZONE-07 (λ: zones)
+VENUE PUT /zones/{id} ZONE-07
+(λ: zones) RequestId: 4384cc79-4f14-4c99-b12c-01f12ed9ade5  Duration: 1.27 ms  Billed Duration: 2 ms
+
+
+PATCH /dev/zones/ZONE-07 (λ: zones)
+VENUE PATCH /zones/{id} ZONE-07
+(λ: zones) RequestId: c64d8ab1-5139-4757-a18f-1653eecc9096  Duration: 0.70 ms  Billed Duration: 1 ms
+
+
+DELETE /dev/zones/ZONE-07 (λ: zones)
+VENUE DELETE /zones/{id} ZONE-07
+(λ: zones) RequestId: 114f1775-823f-4eb5-9cdb-76938ab51cbf  Duration: 1.20 ms  Billed Duration: 2 ms
+
+
+GET /dev/zones (λ: zones)
+VENUE GET /zones collection
+(λ: zones) RequestId: cf968660-07c8-492c-8984-6c0a28f218bb  Duration: 0.85 ms  Billed Duration: 1 ms

@@ -1,0 +1,14 @@
+HTTP/2 201 
+content-type: application/json
+content-length: 108
+date: Wed, 28 Oct 2026 07:31:08 GMT
+x-amzn-trace-id: Root=1-6ae1a4bc-763189b230479cbd110329b6;Parent=371a87daff9ba26e;Sampled=0;Lineage=1:983fa58c:0
+x-amzn-requestid: ffbb4792-e940-44d7-bcb2-47c5e51c538c
+access-control-allow-origin: *
+x-amz-apigw-id: F8atkFtmPHcECyA=
+x-cache: Miss from cloudfront
+via: 1.1 484554ecbd08dfabbbbf5af1d7312d8e.cloudfront.net (CloudFront)
+x-amz-cf-pop: MAD53-P7
+x-amz-cf-id: 9d1QTlBalBQ1qC5mMYxg1HFKNBD2bTm8efKZ-VEmLDobwrSFHlPqmQ==
+
+{"id":"ZONE-NEW","name":"Cloud Test","capacity":1200,"status":"OPEN","operation":"CREATED","simulated":true}

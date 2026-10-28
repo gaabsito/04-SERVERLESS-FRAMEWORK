@@ -1,0 +1,4 @@
+Abre Informe-evidencias.html. Las capturas locales y cloud se incluyen en esta carpeta.
+serverless-offline.txt demuestra el arranque local y las rutas.
+Los JSON y TXT conservan pruebas completas.
+La defensa individual debe realizarla el alumno.

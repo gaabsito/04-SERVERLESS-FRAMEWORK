@@ -1,0 +1,410 @@
+{
+  "base": "https://vkmt2bkh68.execute-api.us-west-2.amazonaws.com/dev",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/zones",
+      "body": null,
+      "status": 200,
+      "response": [
+        {
+          "id": "ZONE-01",
+          "name": "Main Stage",
+          "capacity": 5000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ZONE-07",
+          "name": "Garden Stage",
+          "capacity": 2500,
+          "status": "FULL"
+        },
+        {
+          "id": "ZONE-03",
+          "name": "Invernadero",
+          "capacity": 1800,
+          "status": "OPEN"
+        },
+        {
+          "id": "ZONE-04",
+          "name": "Club Stage",
+          "capacity": 900,
+          "status": "CLOSED"
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/zones/ZONE-07",
+      "body": null,
+      "status": 200,
+      "response": {
+        "id": "ZONE-07",
+        "name": "Garden Stage",
+        "capacity": 2500,
+        "status": "FULL"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zones/UNKNOWN",
+      "body": null,
+      "status": 404,
+      "response": {
+        "message": "Espacio no encontrado"
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zones/UNKNOWN",
+      "body": {
+        "name": "Garden Test",
+        "capacity": 2500,
+        "status": "OPEN"
+      },
+      "status": 404,
+      "response": {
+        "message": "Espacio no encontrado"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/UNKNOWN",
+      "body": {
+        "name": "Garden Test",
+        "capacity": 2500,
+        "status": "OPEN"
+      },
+      "status": 404,
+      "response": {
+        "message": "Espacio no encontrado"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zones/UNKNOWN",
+      "body": null,
+      "status": 404,
+      "response": {
+        "message": "Espacio no encontrado"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {
+        "name": "Garden Test",
+        "capacity": 2500,
+        "status": "OPEN"
+      },
+      "status": 201,
+      "response": {
+        "id": "ZONE-NEW",
+        "name": "Garden Test",
+        "capacity": 2500,
+        "status": "OPEN",
+        "operation": "CREATED",
+        "simulated": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zones/ZONE-07",
+      "body": {
+        "name": "Garden Test",
+        "capacity": 2500,
+        "status": "OPEN"
+      },
+      "status": 200,
+      "response": {
+        "id": "ZONE-07",
+        "name": "Garden Test",
+        "capacity": 2500,
+        "status": "OPEN",
+        "operation": "REPLACED",
+        "simulated": true
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zones/ZONE-07",
+      "body": {
+        "status": "FULL"
+      },
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/ZONE-07",
+      "body": {
+        "status": "OPEN"
+      },
+      "status": 200,
+      "response": {
+        "id": "ZONE-07",
+        "changes": {
+          "status": "OPEN"
+        },
+        "operation": "UPDATED",
+        "simulated": true
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/ZONE-07",
+      "body": {
+        "status": "FULL"
+      },
+      "status": 200,
+      "response": {
+        "id": "ZONE-07",
+        "changes": {
+          "status": "FULL"
+        },
+        "operation": "UPDATED",
+        "simulated": true
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/ZONE-07",
+      "body": {
+        "status": "CLOSED"
+      },
+      "status": 200,
+      "response": {
+        "id": "ZONE-07",
+        "changes": {
+          "status": "CLOSED"
+        },
+        "operation": "UPDATED",
+        "simulated": true
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": "{",
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": "null",
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": [],
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {},
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {
+        "name": " ",
+        "capacity": 2500,
+        "status": "OPEN"
+      },
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {
+        "name": "Garden Test",
+        "capacity": 0,
+        "status": "OPEN"
+      },
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {
+        "name": "Garden Test",
+        "capacity": -1,
+        "status": "OPEN"
+      },
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {
+        "name": "Garden Test",
+        "capacity": 1.5,
+        "status": "OPEN"
+      },
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {
+        "name": "Garden Test",
+        "capacity": "2500",
+        "status": "OPEN"
+      },
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {
+        "name": "Garden Test",
+        "capacity": 2500,
+        "status": "PAUSED"
+      },
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zones",
+      "body": {
+        "name": "Garden Test",
+        "capacity": 2500,
+        "status": "OPEN",
+        "id": "forced"
+      },
+      "status": 400,
+      "response": {
+        "message": "Objeto requerido: name no vacío (máx. 100), capacity entero positivo y status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/ZONE-07",
+      "body": {},
+      "status": 400,
+      "response": {
+        "message": "PATCH requiere únicamente status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/ZONE-07",
+      "body": {
+        "status": "PAUSED"
+      },
+      "status": 400,
+      "response": {
+        "message": "PATCH requiere únicamente status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/ZONE-07",
+      "body": {
+        "status": "OPEN",
+        "name": "X"
+      },
+      "status": 400,
+      "response": {
+        "message": "PATCH requiere únicamente status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/ZONE-07",
+      "body": "null",
+      "status": 400,
+      "response": {
+        "message": "PATCH requiere únicamente status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/zones/ZONE-07",
+      "body": "{",
+      "status": 400,
+      "response": {
+        "message": "PATCH requiere únicamente status OPEN, FULL o CLOSED"
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zones/ZONE-07",
+      "body": null,
+      "status": 200,
+      "response": {
+        "id": "ZONE-07",
+        "operation": "DELETED",
+        "simulated": true
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zones",
+      "body": null,
+      "status": 200,
+      "response": [
+        {
+          "id": "ZONE-01",
+          "name": "Main Stage",
+          "capacity": 5000,
+          "status": "OPEN"
+        },
+        {
+          "id": "ZONE-07",
+          "name": "Garden Stage",
+          "capacity": 2500,
+          "status": "FULL"
+        },
+        {
+          "id": "ZONE-03",
+          "name": "Invernadero",
+          "capacity": 1800,
+          "status": "OPEN"
+        },
+        {
+          "id": "ZONE-04",
+          "name": "Club Stage",
+          "capacity": 900,
+          "status": "CLOSED"
+        }
+      ]
+    }
+  ],
+  "corsPreflight": "OK"
+}

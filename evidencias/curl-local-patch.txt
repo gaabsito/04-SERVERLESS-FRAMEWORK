@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+vary: origin
+access-control-expose-headers: WWW-Authenticate,Server-Authorization
+cache-control: no-cache
+content-length: 85
+Date: Wed, 28 Oct 2026 07:29:39 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":"ZONE-07","changes":{"status":"CLOSED"},"operation":"UPDATED","simulated":true}

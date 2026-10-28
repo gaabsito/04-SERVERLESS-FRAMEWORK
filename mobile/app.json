@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Venue Control",
+    "slug": "venue-control",
+    "version": "1.0.0",
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
