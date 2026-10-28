@@ -1,4 +1,4 @@
-# Venue Control
+# 04 - SERVERLESS FRAMEWORK
 
 Aplicación React Native/Expo para consultar espacios y demostrar operaciones CRUD sobre una API Serverless en AWS.
 
